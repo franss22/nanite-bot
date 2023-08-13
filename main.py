@@ -149,7 +149,7 @@ async def dt(ctx: Ctx, delta: int = 0):
 @bot.command()
 @commands.check(is_servicio_tecnico)
 @uses_database
-async def reset_dt(ctx: Ctx, dt: int):
+async def reset_global_dt(ctx: Ctx, dt: int):
     users = db.user_list()
     i = 0
     for user in users:
@@ -164,7 +164,7 @@ async def reset_dt(ctx: Ctx, dt: int):
 @bot.command()
 @commands.check(is_servicio_tecnico)
 @uses_database
-async def reset_dt(ctx: Ctx, dt: int):
+async def add_global_dt(ctx: Ctx, dt: int):
     users = db.user_list()
     i = 0
     for user in users:
